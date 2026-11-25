@@ -25,6 +25,22 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Footer year
+  var yr = document.querySelectorAll(".js-year");
+  for (var i = 0; i < yr.length; i++) yr[i].textContent = String(new Date().getFullYear());
+
+  // Lazy-load decorative background images (elements with data-bg)
+  var bgs = document.querySelectorAll(".lazy-bg[data-bg]");
+  function loadBg(el) { el.style.backgroundImage = "url('" + el.getAttribute("data-bg") + "')"; el.removeAttribute("data-bg"); }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { loadBg(en.target); io.unobserve(en.target); } });
+    }, { rootMargin: "400px 0px" });
+    for (var j = 0; j < bgs.length; j++) io.observe(bgs[j]);
+  } else {
+    for (var k = 0; k < bgs.length; k++) loadBg(bgs[k]);
+  }
+
   // Leadpages form replacement: there is no public email or phone on the
   // original site, and idaho-notary.com has no MX records. The contact form
   // and "Let's talk" CTAs therefore open the existing Calendly scheduler
