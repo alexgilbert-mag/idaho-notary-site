@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us | MAG Notary Services, Eagle, Idaho</title>
-  <meta name="description" content="Contact MAG Notary Services. Office by appointment at 408 S Eagle Road, Suite 205, Eagle, ID 83616. Book a notary online.">
+  <meta name="description" content="Call or text (208) 901-8995, book online, or send a message to MAG Notary Services. Office by appointment at 408 S Eagle Road, Suite 205, Eagle, ID 83616. Book a notary online.">
   <link rel="canonical" href="https://idaho-notary.com/contact">
   <meta property="og:title" content="Contact Us | MAG Notary Services, Eagle, Idaho">
-  <meta property="og:description" content="Contact MAG Notary Services. Office by appointment at 408 S Eagle Road, Suite 205, Eagle, ID 83616. Book a notary online.">
+  <meta property="og:description" content="Call or text (208) 901-8995, book online, or send a message to MAG Notary Services. Office by appointment at 408 S Eagle Road, Suite 205, Eagle, ID 83616. Book a notary online.">
   <meta property="og:image" content="https://idaho-notary.com/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -17,7 +17,7 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Us | MAG Notary Services, Eagle, Idaho">
-  <meta name="twitter:description" content="Contact MAG Notary Services. Office by appointment at 408 S Eagle Road, Suite 205, Eagle, ID 83616. Book a notary online.">
+  <meta name="twitter:description" content="Call or text (208) 901-8995, book online, or send a message to MAG Notary Services. Office by appointment at 408 S Eagle Road, Suite 205, Eagle, ID 83616. Book a notary online.">
   <meta name="twitter:image" content="https://idaho-notary.com/assets/images/og-image.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -41,6 +41,7 @@
             </div>
           </li>
           <li><a class="nav-link is-active" href="contact.html">Contact</a></li>
+          <li><a class="nav-link nav-phone" href="tel:+12089018995" aria-label="Call (208) 901-8995">(208) 901-8995</a></li>
           <li><a class="btn btn-dark" href="https://calendly.com/mag-idaho">Book a Notary</a></li>
         </ul>
       </nav>
@@ -56,41 +57,60 @@
       <div class="container">
         <div class="contact-grid">
           <div>
-            <h2>Let’s get moving.</h2>
+            <h2>How can we help?</h2>
             <div class="prose">
-              <p>Our team is excited to make it easy to find both a reliable notary, and one that is available at a time that works for you. Contact us with this form to schedule your <strong>free</strong> initial consultation to chat with a team member, so we can answer your questions and show you how easy our process works.</p>
-              <p>Don't hesitate to send us other inquiries as well! Someone will be in touch as soon as possible to answer your questions and get you started!</p>
+              <p>Reach us whichever way is easiest for you:</p>
+            </div>
+            <ul class="contact-options">
+              <li><a class="btn btn-dark" href="tel:+12089018995"><b>Call (208) 901-8995</b></a></li>
+              <li><a class="btn btn-lime" href="sms:+12089018995"><b>Text (208) 901-8995</b></a></li>
+              <li><a class="btn btn-cyan" href="https://calendly.com/mag-idaho"><b>Book a Notary Online</b></a></li>
+              <li><a class="btn btn-outline" href="#contact-form"><b>Send a Message</b></a></li>
+            </ul>
+            <div class="office">
+              <p>Office by appointment: <strong>408 S Eagle Road, Suite 205, Eagle, ID 83616</strong></p>
+              <p>Need an evening or weekend time that isn't showing in the scheduler? Call, text or send a message and we'll get back to you.</p>
             </div>
           </div>
-          <form id="contact-form" action="https://calendly.com/mag-idaho" method="get">
-            <div class="form-error" role="alert"></div>
+          <form id="contact-form" action="https://formsubmit.co/admin@mag-idaho.com" method="POST">
+            <h3 class="form-title">Send a message</h3>
+            <input type="hidden" name="_subject" value="New message from idaho-notary.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://idaho-notary.com/contact?sent=1#contact-form">
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-success" role="status"></div>
             <div class="form-field">
               <label for="full_name">Full Name</label>
-              <input id="full_name" name="full_name" type="text" maxlength="500" placeholder="Type your name here" autocomplete="name">
+              <input id="full_name" name="Name" type="text" maxlength="500" placeholder="Type your name here" autocomplete="name" required>
             </div>
             <div class="form-field">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" maxlength="500" placeholder="Preferred email address for us to contact" autocomplete="email" required>
             </div>
             <div class="form-field">
-              <label for="comment">Comment</label>
-              <textarea id="comment" name="comment" rows="4" placeholder="Feel free to let us know the reason for reaching out!"></textarea>
+              <label for="phone_number">Phone Number</label>
+              <input id="phone_number" name="Phone" type="tel" maxlength="35" placeholder="Best daytime phone number" autocomplete="tel">
             </div>
             <div class="form-field">
-              <label for="phone_number">Phone Number</label>
-              <input id="phone_number" name="phone_number" type="tel" maxlength="35" placeholder="Best daytime phone number" autocomplete="tel">
+              <label for="service">Service you're interested in</label>
+              <select id="service" name="Service">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="In-Office (Eagle)">In-Office (Eagle)</option>
+                <option value="Traveling notary (we come to you)">Traveling notary (we come to you)</option>
+                <option value="Remote online notary">Remote online notary</option>
+                <option value="Other / question">Other / question</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="comment">Message</label>
+              <textarea id="comment" name="Message" rows="4" placeholder="What do you need notarized, how many signers, and when works for you?"></textarea>
             </div>
             <label class="form-check">
-              <input type="checkbox" name="confirmation" value="true">
+              <input type="checkbox" name="Text consent" value="Yes">
               <span>Yes, I consent to receiving texts at this phone number</span>
             </label>
-            <button class="btn btn-purple" type="submit">Send</button>
+            <button class="btn btn-purple" type="submit">Send Message</button>
           </form>
-        </div>
-        <div class="office">
-          <p>Our office is conveniently located at: <strong>408 S Eagle Road, Suite 205, Eagle ID 83616</strong></p>
-          <p>Call or send a message to set an appointment today!</p>
         </div>
       </div>
     </section>
@@ -106,14 +126,14 @@
       </nav>
       <p>Office by appointment: 408 S Eagle Road, Suite 205, Eagle, ID 83616</p>
       <p>Serving Eagle, Boise, Meridian, Star, Nampa, Caldwell, Kuna, Middleton, Emmett and the Treasure Valley</p>
-      <!-- TODO(Pass 2): add the business phone number here as a tap-to-call link (tel:) once Alex provides it. Do not guess a number. -->
+      <p>Call or text: <a class="footer-phone" href="tel:+12089018995">(208) 901-8995</a></p>
       <p>&copy; <span class="js-year">2026</span> MAG Enterprises LLC. All rights reserved.</p>
     </div>
   </footer>
   <div class="mobile-cta" role="region" aria-label="Quick actions">
-    <a class="btn btn-cyan" href="https://calendly.com/mag-idaho"><b>Book a Notary</b></a>
-    <a class="btn btn-lime" href="notary-pricing.html"><b>See Pricing</b></a>
-    <!-- TODO(Pass 2): add a "Call" button (tel:) here once Alex provides the business phone number. -->
+    <a class="btn btn-dark" href="tel:+12089018995"><b>Call</b></a>
+    <a class="btn btn-cyan" href="https://calendly.com/mag-idaho"><b>Book Now</b></a>
+    <a class="btn btn-lime" href="notary-pricing.html"><b>Pricing</b></a>
   </div>
   <script src="assets/js/site.js"></script>
 </body>
